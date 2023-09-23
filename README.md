@@ -144,3 +144,54 @@ If it is successful you should see a json payload return that looks like below s
 ```
 
 In order for the user AWS CLI, an AWS CLI credits needs to be generated from IAM User.
+
+## Terraform Basics ##
+
+Terraform sources their providers and modules from the Terraform registry which located at [registry.terraform.io](https://registry.terraform.io)
+
+- **Providers:** is an interface to APIs that will allow to create resources in terraform.
+- **Modules:**  are a way to make large amount of terraforn code modular, portable and sharable.
+
+## Terraform Console ##
+
+- To view a list of all trraform commands by running `terraform`
+
+## Terraform Init ##
+
+- To initialize a terraform project run `terraform init` to download the set of binaries for the terraform providers that will be used in this project.
+
+## Terraform Plan ##
+
+- To generate out a changeset, about the state of our infrastructure and what will be changed. We can output this changeset i.e. "plan" to be passed to an apply, but often you can just ignore outputting.
+
+  `terraform init`
+
+## Terraform Apply ##
+
+- To excecute the plan and pass the changeset to be execute by terraform. Apply should prompt yes or no, but it can be set to auto flag e.g. `terraform apply --auto-approve`
+
+  `terraform apply`
+
+## Terraform Lock Files ##
+
+The `.terraform.lock.hcl` contains the locked versioning for providers or modules that should be used with this project.
+
+The terraform lock file should be committed to your Version Control System (VCS) e.g. Github
+
+## Terraform State Files ##
+
+The `.terraform.tfstate` contain information about the current state of your infrastructure.
+
+This file **SHOULD NOT BE COMMITTED** to your VCS.
+
+The file can contain sensentive data.
+
+If you lose this file, you lose the state of your infrastructure.
+
+## Terraform Lock File ##
+
+A `.terraform.lock.hcl` is the previous state file state.
+
+## Terraform Directory ##
+
+The `.terraform` directory contains binaries of terraform providers.
