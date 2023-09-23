@@ -2,7 +2,7 @@
 
 ## Semantic Versioning ##
 
-This project wil be utilizing semantic versioning [semver.org](https://semver.org/) for tagging.
+This project will be utilizing semantic versioning [semver.org](https://semver.org/) for tagging.
 
 Given a version number **MAJOR.MINOR.PATCH**, increment the:
 
@@ -71,3 +71,51 @@ We need to be careful when using the `init` because it will not re-run if we res
 
 Ref: https://www.gitpod.io/docs/configure/workspace/tasks
 
+## Working Env Vars ##
+
+We can list out all environment variables (Env Vars) using the `env` command
+
+We can filter specific env vars using grep e.g. `env | grep AWS_`
+
+## Setting and Unsetting Env Vars ##
+
+In the terminal we can set using `export HELLO=world`
+
+In the terminal we can unset using `unset HELLO`
+
+We can set an env var temporarily when just running a command
+
+```bash
+HELLO='world' ./bin/print_message
+```
+
+Within a bash script we can set env without writing export e.g.
+
+```bash
+#!/usr/bin/env bash
+HELLO='world'
+
+echo $HELLO
+```
+
+## Printing Vars ##
+
+We can print an env var using echo e.g. `echo HELLO`
+
+## Scoping of Env Vars ##
+
+When you open up nmew bash terminals in VSCode it will not be aware of env vars that you have set in another windows
+
+If you want to env vars to persist across all future bash terminals that are open you need to set env vars in you bash profile. e.g. `.bash_profile`
+
+## Persistting Env Vars in Gitpod ##
+
+We can persist env vars into gitpod by storing them in Gitpod Secrets Storage.
+
+```bash
+gp env HELLO='world'
+```
+
+All future workspaces launced will set the env vars for all bash terminals opened in these workspaces.
+
+You can also set env vars in the `.gitpod.yml` but this can only contain non-sensitive env vars.
