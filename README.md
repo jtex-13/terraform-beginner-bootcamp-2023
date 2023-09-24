@@ -168,30 +168,36 @@ Terraform sources their providers and modules from the Terraform registry which 
 
 ## Terraform Apply ##
 
-- To excecute the plan and pass the changeset to be execute by terraform. Apply should prompt yes or no, but it can be set to auto flag e.g. `terraform apply --auto-approve`
+- To excecute the plan and pass the changeset to be execute by terraform. Apply should prompt yes or no, but it can be set to auto flag e.g. `terraform apply -auto-approve`
 
   `terraform apply`
 
+## Terraform Destory ##
+
+- This will destroy resources.
+
+  `terraform destroy`
+
+**NOTE:** Be mindful of this command and always review the summary of action before you confirm "Y".
+
 ## Terraform Lock Files ##
 
-The `.terraform.lock.hcl` contains the locked versioning for providers or modules that should be used with this project.
+- The `.terraform.lock.hcl` contains the locked versioning for providers or modules that should be used with this project.
 
-The terraform lock file should be committed to your Version Control System (VCS) e.g. Github
+- The terraform lock file should be committed to your Version Control System (VCS) e.g. Github
 
 ## Terraform State Files ##
 
-The `.terraform.tfstate` contain information about the current state of your infrastructure.
+- The `.terraform.tfstate` contain information about the current state of your infrastructure.
 
-This file **SHOULD NOT BE COMMITTED** to your VCS.
+- This file **SHOULD NOT BE COMMITTED** to your VCS.
 
-The file can contain sensentive data.
+- The file can contain sensentive data.
 
-If you lose this file, you lose the state of your infrastructure.
+- If you lose this file, you lose the state of your infrastructure.
 
-## Terraform Lock File ##
-
-A `.terraform.lock.hcl` is the previous state file state.
+- A `.terraform.lock.hcl` is the previous state file state.
 
 ## Terraform Directory ##
 
-The `.terraform` directory contains binaries of terraform providers.
+- The `.terraform` directory contains binaries of terraform providers.
