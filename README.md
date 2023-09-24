@@ -14,7 +14,7 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ## Installing Terraform CLI ##
 
-The current Terraform CLI installation instructions have changed due to gpg keyring changes. Please refer the latest instructions from Terraform documentation if you wish to run it line by line command [here]. (https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+The current Terraform CLI installation instructions have changed due to gpg keyring changes. Please refer the latest instructions from Terraform documentation if you wish to run it line by line command [terraform-install-cli](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli).
 
 **Note:** This project is built in againts Ubuntu. Please consider checking your running Linux distribuion and accordingly, to distribution needs.
 
@@ -201,3 +201,7 @@ Terraform sources their providers and modules from the Terraform registry which 
 ## Terraform Directory ##
 
 - The `.terraform` directory contains binaries of terraform providers.
+
+## S3 Bucket ##
+
+- To avoid any further error or issue during the creation of S3 bucket mainly on the naming, always refer the [bucketnamingrules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
