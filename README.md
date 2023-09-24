@@ -14,7 +14,7 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ## Installing Terraform CLI ##
 
-The current Terraform CLI installation instructions have changed due to gpg keyring changes. Please refer the latest instructions from Terraform documentation if you wish to run it line by line command [here]. (https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+The current Terraform CLI installation instructions have changed due to gpg keyring changes. Please refer the latest instructions from Terraform documentation if you wish to run it line by line command [terraform-install-cli](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli).
 
 **Note:** This project is built in againts Ubuntu. Please consider checking your running Linux distribuion and accordingly, to distribution needs.
 
@@ -168,30 +168,40 @@ Terraform sources their providers and modules from the Terraform registry which 
 
 ## Terraform Apply ##
 
-- To excecute the plan and pass the changeset to be execute by terraform. Apply should prompt yes or no, but it can be set to auto flag e.g. `terraform apply --auto-approve`
+- To excecute the plan and pass the changeset to be execute by terraform. Apply should prompt yes or no, but it can be set to auto flag e.g. `terraform apply -auto-approve`
 
   `terraform apply`
 
+## Terraform Destory ##
+
+- This will destroy resources.
+
+  `terraform destroy`
+
+**NOTE:** Be mindful of this command and always review the summary of action before you confirm "Y".
+
 ## Terraform Lock Files ##
 
-The `.terraform.lock.hcl` contains the locked versioning for providers or modules that should be used with this project.
+- The `.terraform.lock.hcl` contains the locked versioning for providers or modules that should be used with this project.
 
-The terraform lock file should be committed to your Version Control System (VCS) e.g. Github
+- The terraform lock file should be committed to your Version Control System (VCS) e.g. Github
 
 ## Terraform State Files ##
 
-The `.terraform.tfstate` contain information about the current state of your infrastructure.
+- The `.terraform.tfstate` contain information about the current state of your infrastructure.
 
-This file **SHOULD NOT BE COMMITTED** to your VCS.
+- This file **SHOULD NOT BE COMMITTED** to your VCS.
 
-The file can contain sensentive data.
+- The file can contain sensentive data.
 
-If you lose this file, you lose the state of your infrastructure.
+- If you lose this file, you lose the state of your infrastructure.
 
-## Terraform Lock File ##
-
-A `.terraform.lock.hcl` is the previous state file state.
+- A `.terraform.lock.hcl` is the previous state file state.
 
 ## Terraform Directory ##
 
-The `.terraform` directory contains binaries of terraform providers.
+- The `.terraform` directory contains binaries of terraform providers.
+
+## S3 Bucket ##
+
+- To avoid any further error or issue during the creation of S3 bucket mainly on the naming, always refer the [bucketnamingrules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
