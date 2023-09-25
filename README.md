@@ -205,3 +205,26 @@ Terraform sources their providers and modules from the Terraform registry which 
 ## S3 Bucket ##
 
 - To avoid any further error or issue during the creation of S3 bucket mainly on the naming, always refer the [bucketnamingrules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
+
+## Issues with Terraform Cloud Login and Gitpod Workspace ##
+
+- When attempting to run `terraform login` initially, it didn't push through as it tries to find the generated token. Possibly, this does not work expected in Gitpod Vscode in the browser.
+
+- As the workaround, to manually generate a token in the [Terrform cloud](https://app.terraform.io/app/settings/tokens?source=terraform-login.)
+
+- Accordingly, create and open a file below.
+```bash
+nano /home/gitpod/.terraform.d/credentials.tfrc.json
+open /home/gitpod/.terraform.d/credentials.tfrc.json
+```
+
+- Paste the below json file code inside the `credentials.tfrc.json`.
+```bash
+{
+    "credentials": {
+        "app.terraform.io": {
+            "token": "ENTER-YOUR-TERRAFORM-CLOUD-GENERATED-TOKEN"
+        }
+    }
+}
+```
