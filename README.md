@@ -228,3 +228,5 @@ open /home/gitpod/.terraform.d/credentials.tfrc.json
     }
 }
 ```
+
+- The following bash script [bin/generate_tfrc_credentials](bin/generate_tfrc_credentials) has been automated as a workaround. 
