@@ -5,7 +5,7 @@
   * [Using Bash Script](#using-bash-script)
   * [Shebang](#shebang)
   * [Execution Consideration](#execution-consideration)
-  * [Github Lifecyle (Before, Init, Command)](#github-lifecyle--before--init--command-)
+  * [Github Lifecyle](#github-lifecyle)
   * [Working Env Vars](#working-env-vars)
   * [Setting and Unsetting Env Vars](#setting-and-unsetting-env-vars)
   * [Printing Vars](#printing-vars)
@@ -90,7 +90,9 @@ e.g.
   chmod 700 ./bin/install_terraform_cli
   ```
 
-## Github Lifecyle (Before, Init, Command)
+## Github Lifecyle
+
+**NOTE:** Before, Init, Command
 
 We need to be careful when using the `init` because it will not re-run if we restart an existing workspace.
 
