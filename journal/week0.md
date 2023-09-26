@@ -2,9 +2,11 @@
 
   - [Semantic Versioning](#semantic-versioning)
   - [Installing Terraform CLI](#installing-terraform-cli)
+    * [Considerations with the Terraform CLI changes](#considerations-with-the-terraform-cli-changes)
+    * [Considerations for Linux Distribution](#considerations-for-linux-distribution)
     * [Using Bash Script](#using-bash-script)
-    * [Shebang](#shebang)
-    * [Execution Consideration](#execution-consideration)
+      + [Shebang](#shebang)
+      + [Execution Consideration](#execution-consideration)
   - [GitPod Lifecyle](#gitpod-lifecyle)
   - [Working Env Vars](#working-env-vars)
     * [Env Command](#env-command)
@@ -16,13 +18,13 @@
   - [Terraform Basics](#terraform-basics)
     * [Terraform Registry](#terraform-registry)
     * [Terraform Console](#terraform-console)
-      * [Terraform Init](#terraform-init)
-      * [Terraform Plan](#terraform-plan)
-      * [Terraform Apply](#terraform-apply)
-      * [Terraform Destory](#terraform-destory)
-      * [Terraform Lock Files](#terraform-lock-files)
-      * [Terraform State Files](#terraform-state-files)
-      * [Terraform Directory](#terraform-directory)
+      + [Terraform Init](#terraform-init)
+      + [Terraform Plan](#terraform-plan)
+      + [Terraform Apply](#terraform-apply)
+      + [Terraform Destory](#terraform-destory)
+      + [Terraform Lock Files](#terraform-lock-files)
+      + [Terraform State Files](#terraform-state-files)
+      + [Terraform Directory](#terraform-directory)
   - [S3 Bucket](#s3-bucket)
   - [Issues with Terraform Cloud Login and Gitpod Workspace](#issues-with-terraform-cloud-login-and-gitpod-workspace)
 
@@ -41,9 +43,13 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ## Installing Terraform CLI ##
 
+### Considerations with the Terraform CLI changes ###
+
 The current Terraform CLI installation instructions have changed due to gpg keyring changes. Please refer the latest instructions from Terraform documentation if you wish to run it line by line command [terraform-install-cli](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli).
 
-**Note:** This project is built in againts Ubuntu. Please consider checking your running Linux distribuion and accordingly, to distribution needs.
+### Considerations for Linux Distribution ###
+
+This project is built in againts Ubuntu. Please consider checking your running Linux distribuion and accordingly, to distribution needs.
 
 Example:
 ```
