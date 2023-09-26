@@ -217,7 +217,7 @@ Terraform sources their providers and modules from the Terraform registry which 
 
   `terraform destroy`
 
-**NOTE:** Be mindful of this command and always review the summary of action before you confirm "Y".
+  **NOTE:** Be mindful of this command and always review the summary of action before you confirm "Y".
 
 #### Terraform Lock Files ####
 
