@@ -2,7 +2,7 @@
 
   * [Semantic Versioning](#semantic-versioning)
   * [Installing Terraform CLI](#installing-terraform-cli)
-  * [Using Bash Script (optional)](#using-bash-script)
+  * [Using Bash Script](#using-bash-script)
   * [Shebang](#shebang)
   * [Execution Consideration](#execution-consideration)
   * [Github Lifecyle (Before, Init, Command)](#github-lifecyle--before--init--command-)
