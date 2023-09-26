@@ -100,11 +100,13 @@ Ref: https://www.gitpod.io/docs/configure/workspace/tasks
 
 ## Working Env Vars ##
 
+### Env Command ###
+
 We can list out all environment variables (Env Vars) using the `env` command
 
 We can filter specific env vars using grep e.g. `env | grep AWS_`
 
-## Setting and Unsetting Env Vars ##
+### Setting and Unsetting Env Vars ###
 
 In the terminal we can set using `export HELLO=world`
 
@@ -125,17 +127,17 @@ HELLO='world'
 echo $HELLO
 ```
 
-## Printing Vars ##
+### Printing Vars ###
 
 We can print an env var using echo e.g. `echo HELLO`
 
-## Scoping of Env Vars ##
+### Scoping of Env Vars ###
 
 When you open up nmew bash terminals in VSCode it will not be aware of env vars that you have set in another windows
 
 If you want to env vars to persist across all future bash terminals that are open you need to set env vars in you bash profile. e.g. `.bash_profile`
 
-## Persistting Env Vars in Gitpod ##
+### Persistting Env Vars in Gitpod ###
 
 We can persist env vars into gitpod by storing them in Gitpod Secrets Storage.
 
@@ -174,32 +176,34 @@ In order for the user AWS CLI, an AWS CLI credits needs to be generated from IAM
 
 ## Terraform Basics ##
 
+### Terraform Registry ###
+
 Terraform sources their providers and modules from the Terraform registry which located at [registry.terraform.io](https://registry.terraform.io)
 
 - **Providers:** is an interface to APIs that will allow to create resources in terraform.
 - **Modules:**  are a way to make large amount of terraforn code modular, portable and sharable.
 
-## Terraform Console ##
+### Terraform Console ###
 
 - To view a list of all trraform commands by running `terraform`
 
-## Terraform Init ##
+### Terraform Init ###
 
 - To initialize a terraform project run `terraform init` to download the set of binaries for the terraform providers that will be used in this project.
 
-## Terraform Plan ##
+### Terraform Plan ###
 
 - To generate out a changeset, about the state of our infrastructure and what will be changed. We can output this changeset i.e. "plan" to be passed to an apply, but often you can just ignore outputting.
 
   `terraform init`
 
-## Terraform Apply ##
+### Terraform Apply ###
 
 - To excecute the plan and pass the changeset to be execute by terraform. Apply should prompt yes or no, but it can be set to auto flag e.g. `terraform apply -auto-approve`
 
   `terraform apply`
 
-## Terraform Destory ##
+### Terraform Destory ###
 
 - This will destroy resources.
 
@@ -207,13 +211,13 @@ Terraform sources their providers and modules from the Terraform registry which 
 
 **NOTE:** Be mindful of this command and always review the summary of action before you confirm "Y".
 
-## Terraform Lock Files ##
+### Terraform Lock Files ###
 
 - The `.terraform.lock.hcl` contains the locked versioning for providers or modules that should be used with this project.
 
 - The terraform lock file should be committed to your Version Control System (VCS) e.g. Github
 
-## Terraform State Files ##
+### Terraform State Files ###
 
 - The `.terraform.tfstate` contain information about the current state of your infrastructure.
 
@@ -225,7 +229,7 @@ Terraform sources their providers and modules from the Terraform registry which 
 
 - A `.terraform.lock.hcl` is the previous state file state.
 
-## Terraform Directory ##
+### Terraform Directory ##
 
 - The `.terraform` directory contains binaries of terraform providers.
 
