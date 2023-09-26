@@ -5,7 +5,7 @@
   * [Using Bash Script](#using-bash-script)
   * [Shebang](#shebang)
   * [Execution Consideration](#execution-consideration)
-  * [Github Lifecyle](#github-lifecyle)
+  * [GitPod Lifecyle](#gitpod-lifecyle)
   * [Working Env Vars](#working-env-vars)
   * [Setting and Unsetting Env Vars](#setting-and-unsetting-env-vars)
   * [Printing Vars](#printing-vars)
@@ -90,7 +90,7 @@ e.g.
   chmod 700 ./bin/install_terraform_cli
   ```
 
-## Github Lifecyle
+## GitPod Lifecyle
 
 **NOTE:** Before, Init, Command
 
