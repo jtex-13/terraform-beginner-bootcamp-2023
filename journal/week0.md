@@ -53,7 +53,7 @@ Release:        22.04
 Codename:       jammy
 ```
 
-## Using Bash Script (optional)
+## Using Bash Script
 While fixing the Terraform CLI gpg deprecation issue, another option to consider to run the installation is via bash script. 
 
 The bash script is located here [./bin/install_terraform_cli](./bin/install_terraform_cli)
