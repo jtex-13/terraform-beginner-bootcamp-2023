@@ -61,7 +61,7 @@ Release:        22.04
 Codename:       jammy
 ```
 
-## Using Bash Script
+### Using Bash Script ###
 While fixing the Terraform CLI gpg deprecation issue, another option to consider to run the installation is via bash script. 
 
 The bash script is located here [./bin/install_terraform_cli](./bin/install_terraform_cli)
@@ -70,7 +70,7 @@ The bash script is located here [./bin/install_terraform_cli](./bin/install_terr
 - This allow us to debug and execute  Terraform CLI installation
 - This will allow better portability for other projects that need to install Terraform CLI.
 
-## Shebang ##
+#### Shebang ####
 
 A Shebang (prounced Sha-bang) tells the bash script what program that will interpret the script. e.g. `#!/bin/bash`
 
@@ -82,7 +82,7 @@ ChatGPT recommended this format for bash: `#!/usr/bin/env bash`
 
 Ref: https//en.wikipedia.org/wiki/Shebang_(Unix)
 
-## Execution Consideration
+#### Execution Consideration ####
 
 When executng the bash script we can use the `./` shorthand notation to execute the bash script.
 
@@ -195,23 +195,23 @@ Terraform sources their providers and modules from the Terraform registry which 
 
 - To view a list of all trraform commands by running `terraform`
 
-### Terraform Init ###
+#### Terraform Init ####
 
 - To initialize a terraform project run `terraform init` to download the set of binaries for the terraform providers that will be used in this project.
 
-### Terraform Plan ###
+#### Terraform Plan ####
 
 - To generate out a changeset, about the state of our infrastructure and what will be changed. We can output this changeset i.e. "plan" to be passed to an apply, but often you can just ignore outputting.
 
   `terraform init`
 
-### Terraform Apply ###
+#### Terraform Apply ####
 
 - To excecute the plan and pass the changeset to be execute by terraform. Apply should prompt yes or no, but it can be set to auto flag e.g. `terraform apply -auto-approve`
 
   `terraform apply`
 
-### Terraform Destory ###
+#### Terraform Destory ####
 
 - This will destroy resources.
 
@@ -219,13 +219,13 @@ Terraform sources their providers and modules from the Terraform registry which 
 
 **NOTE:** Be mindful of this command and always review the summary of action before you confirm "Y".
 
-### Terraform Lock Files ###
+#### Terraform Lock Files ####
 
 - The `.terraform.lock.hcl` contains the locked versioning for providers or modules that should be used with this project.
 
 - The terraform lock file should be committed to your Version Control System (VCS) e.g. Github
 
-### Terraform State Files ###
+#### Terraform State Files ####
 
 - The `.terraform.tfstate` contain information about the current state of your infrastructure.
 
@@ -237,7 +237,7 @@ Terraform sources their providers and modules from the Terraform registry which 
 
 - A `.terraform.lock.hcl` is the previous state file state.
 
-### Terraform Directory ##
+#### Terraform Directory ####
 
 - The `.terraform` directory contains binaries of terraform providers.
 
