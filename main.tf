@@ -5,7 +5,14 @@ terraform {
       version = "1.0.0"
     }
   }
-}
+
+  cloud {
+    organization = "jtex-cloud-learning"
+    workspaces {
+      name = "terra-house-01"
+    }
+  }
+}  
 
 provider "terratowns" {
   endpoint = var.terratowns_endpoint
@@ -13,13 +20,11 @@ provider "terratowns" {
   token = var.terratowns_access_token
 }
 
-module "terrahouse_aws" {
+module "family_coding_event" {
   source = "./modules/terrahouse_aws"
   user_uuid = var.teacherseat_user_uuid
-  index_html_filepath = var.index_html_filepath
-  error_html_filepath = var.error_html_filepath
-  content_version = var.content_version
-  assets_path = var.assets_path
+  public_path = var.family_event.public_path
+  content_version = var.family_event.content_version
 }
 
 resource "terratowns_home" "home" {
@@ -28,9 +33,27 @@ resource "terratowns_home" "home" {
 Family Coders is a retreat conducted that allows their family members to learn how to code.
 Also an oppurtunity for the coder parents to spend time and share their hidden talents to their kids.
 DESCRIPTION
-  domain_name = module.terrahouse_aws.cloudfront_url
+  domain_name = module.family_coding_event.domain_name
   town = "missingo"
-  content_version = 1
+  content_version = var.family_event.content_version
+}
+
+module "meal_coding_event" {
+  source = "./modules/terrahouse_aws"
+  user_uuid = var.teacherseat_user_uuid
+  public_path = var.meal_event.public_path
+  content_version = var.meal_event.content_version
+}
+
+resource "terratowns_home" "home_meal" {
+  name = "It's Meal Time!"
+  description = <<DESCRIPTION
+The event will not be fun without the favorite foods.
+So, to make it more enjoyable we ordered a boodle fight menu for everyone.
+DESCRIPTION
+  domain_name = module.meal_coding_event.domain_name
+  town = "missingo"
+  content_version = var.meal_event.content_version
 }
 
 #module "terrahouse_aws" {
