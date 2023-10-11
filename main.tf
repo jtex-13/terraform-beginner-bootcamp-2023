@@ -34,7 +34,7 @@ Family Coders is a retreat conducted that allows their family members to learn h
 Also an oppurtunity for the coder parents to spend time and share their hidden talents to their kids.
 DESCRIPTION
   domain_name = module.family_coding_event.domain_name
-  town = "missingo"
+  town = "the-nomad-pad"
   content_version = var.family_event.content_version
 }
 
@@ -52,7 +52,7 @@ The event will not be fun without the favorite foods.
 So, to make it more enjoyable we ordered a boodle fight menu for everyone.
 DESCRIPTION
   domain_name = module.meal_coding_event.domain_name
-  town = "missingo"
+  town = "cooker-cove"
   content_version = var.meal_event.content_version
 }
 
