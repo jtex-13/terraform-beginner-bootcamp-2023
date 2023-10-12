@@ -2,7 +2,7 @@ terratowns_endpoint="https://terratowns.cloud/api"
 
 family_event = {
   public_path = "/workspace/terraform-beginner-bootcamp-2023/public/family_event"
-  content_version = 2 
+  content_version = 1
 }
 meal_event = {
   public_path = "/workspace/terraform-beginner-bootcamp-2023/public/meal_event"

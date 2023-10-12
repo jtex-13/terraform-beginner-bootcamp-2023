@@ -30,11 +30,11 @@ module "family_coding_event" {
 resource "terratowns_home" "home" {
   name = "Family of Coders in 2023!"
   description = <<DESCRIPTION
-Family Coders is a retreat conducted that allows their family members to learn how to code.
+Family Game Coders is a retreat conducted that allows their family members to learn how to code while playing games.
 Also an oppurtunity for the coder parents to spend time and share their hidden talents to their kids.
 DESCRIPTION
   domain_name = module.family_coding_event.domain_name
-  town = "the-nomad-pad"
+  town = "gamers-grotto"
   content_version = var.family_event.content_version
 }
 
